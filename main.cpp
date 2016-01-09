@@ -22,11 +22,9 @@ int main(int argc, char** argv) {
         m = atoi(argv[4]);
     }
     vector<Pair> dataset = get_dataset(-4,4);
-    ANFIS a(m);
-    a.fit(dataset, eta, n_iter, batch);
-//    vector<double> res = a.predict(dataset);
-//    for(int i=0; i<dataset.size(); i++){
-//        cout<< dataset[i].x << " "<<dataset[i].y << " "<<res[i] - dataset[i].fx<<endl;
-//    }
+    for(int mi=1; mi<= 20; mi++){
+        ANFIS a(mi);
+        a.fit(dataset, eta, n_iter, batch);
+    }
     return 0;
 }

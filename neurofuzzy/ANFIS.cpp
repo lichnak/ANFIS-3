@@ -136,9 +136,9 @@ void ANFIS::fit(const std::vector<Pair> &dataset, const double eta, const int n_
     double error = this->get_error(dataset);
     clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    std::cout << "t:" <<elapsed_secs << std::endl;
-    std::cout << "e:" << error << std::endl;
-    std::cout << "i:" << e << std::endl;
+//    std::cout << "t:" <<elapsed_secs << std::endl;
+    std::cout<< error << std::endl; // << "e:"
+//    std::cout << "i:" << e << std::endl;
 }
 
 double ANFIS::predict(const double x, const double y) {
